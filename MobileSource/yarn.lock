@@ -6090,7 +6090,7 @@
     "setimmediate" "^1.0.5"
     "string-hash-64" "^1.0.3"
 
-"react-native-safe-area-context@>= 3.0.0":
+"react-native-safe-area-context@^4.3.1", "react-native-safe-area-context@>= 3.0.0":
   "integrity" "sha512-cEr7fknJCToTrSyDCVNg0GRdRMhyLeQa2NZwVCuzEQcWedOw/59ExomjmzCE4rxrKXs6OJbyfNtFRNyewDaHuA=="
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-4.3.1.tgz"
   "version" "4.3.1"
