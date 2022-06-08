@@ -6,7 +6,7 @@
  */
 
 import { FlatList } from 'react-native';
-import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
+import React, { MutableRefObject, useCallback, useEffect, useRef, useState } from 'react';
 import { EventObject, ListRenderItemInfo } from '../../config/types';
 import { COMPONENT_SETTINGS } from '../../config/constants';
 
@@ -96,13 +96,17 @@ export default function RefreshingList(props: RefreshingListProps) {
     }
   }, [props.timerEnabled]);
 
+  const keyExtractor = useCallback((item: EventObject) => item.id.toString(), []);
+
   return (
     <FlatList
       style={{ flex: 1 }}
       data={props.data}
       bounces={isRefreshAvailable()}
       renderItem={props.renderItem}
-      keyExtractor={(item) => item.id}
+      keyExtractor={keyExtractor}
+      b={10}
+      maxToRenderPerBatch={10}
       onScrollEndDrag={() => {
         scrolling.current = false;
       }}
