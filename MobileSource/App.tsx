@@ -10,7 +10,6 @@
 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
 
@@ -19,14 +18,12 @@ import Router from './src/routes/Router';
 
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <Provider store={store}>
-        <NavigationContainer>
-          <AppStatusBar />
-          <Router />
-        </NavigationContainer>
-      </Provider>
-    </SafeAreaProvider>
+    <Provider store={store}>
+      <NavigationContainer>
+        <AppStatusBar />
+        <Router />
+      </NavigationContainer>
+    </Provider>
   );
 };
 export default App;
