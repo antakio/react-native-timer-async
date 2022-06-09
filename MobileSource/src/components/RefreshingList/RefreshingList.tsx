@@ -41,7 +41,7 @@ export default function RefreshingList(props: RefreshingListProps) {
     if (autoRefreshingCounter.current <= 0 || props.data?.length === 0) {
       autoRefreshingCounter.current = REFRESHING_RATE;
       void doTimer(autoRefreshingCounter, startAutoRefreshTimer, pauseAutoRefresh);
-      startCooldownTimer();
+      //startCooldownTimer();
       props.onRefresh();
     }
   };
@@ -105,7 +105,7 @@ export default function RefreshingList(props: RefreshingListProps) {
       bounces={isRefreshAvailable()}
       renderItem={props.renderItem}
       keyExtractor={keyExtractor}
-      b={10}
+      initialNumToRender={10}
       maxToRenderPerBatch={10}
       onScrollEndDrag={() => {
         scrolling.current = false;
