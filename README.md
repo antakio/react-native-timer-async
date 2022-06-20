@@ -1,7 +1,7 @@
-# lab-mobility-hyundai-interview
+# react-native-async-timer
 ==========
 
-This repository contains code to build the `lab-mobility-hyundai-interview` APP as described in the paper
+This repository contains code to build the `react-native-async-timer` APP as described in the paper
 Was tested on Iphone 13 emulator iOS 15.4
 
 Installation
