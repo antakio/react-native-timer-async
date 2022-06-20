@@ -1,7 +1,7 @@
 # react-native-async-timer
 ==========
 
-This repository contains code to build the `react-native-async-timer` APP as described in the paper
+This repository contains code to build the `react-native-async-timer` APP as described in the paper "Autorefreshing Flatlist, How to Pause Timer in React Native, Async Timers in React Native App"
 Was tested on Iphone 13 emulator iOS 15.4
 
 Installation
